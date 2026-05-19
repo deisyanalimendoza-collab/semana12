@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 3.9 - Deisy Mendoza</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="header-nombre">
+        <h1>DEISY ANALÍ MENDOZA GUTIÉRREZ</h1>
+        <hr class="linea-separadora">
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="card-problema">
+            <h2 style="color: var(--accent-orange);">🛡️ Cotizador de Póliza</h2>
+            <p>Protocolo de riesgo: Cálculo de cuota base con cargos adicionales según perfil.</p>
+            
+            <select id="tipo" style="width:100%; padding:15px; background:rgba(0,0,0,0.5); color:var(--accent-orange); border: 1px solid var(--border-industrial); margin-bottom:10px;">
+                <option value="A">Plan A (Cobertura Amplia) - $1,200</option>
+                <option value="B">Plan B (Daños a Terceros) - $950</option>
+            </select>
+
+            <div style="text-align: left; margin: 15px 0; font-size: 0.9rem; color: var(--amber-glow);">
+                <label style="display: block; margin-bottom: 5px;">
+                    <input type="checkbox" id="alcohol"> ¿Hábito de beber alcohol? (+10%)
+                </label>
+                <label style="display: block; margin-bottom: 5px;">
+                    <input type="checkbox" id="lentes"> ¿Utiliza lentes? (+5%)
+                </label>
+                <label style="display: block; margin-bottom: 5px;">
+                    <input type="checkbox" id="enfermo"> ¿Enfermedad cardíaca/diabetes? (+5%)
+                </label>
+            </div>
+
+            <input type="number" id="edad" placeholder="Edad del conductor">
+            
+            <button class="btn-accion" onclick="cotizarSeguro()">GENERAR COTIZACIÓN</button>
+            
+            <div id="resul"></div>
+        </div>
+    </div>
+
+    <a href="3_10.html" class="btn-franja">SIGUIENTE ALGORITMO ➔</a>
+    <script src="../scripts/problemas.js"></script>
+</body>
+</html>

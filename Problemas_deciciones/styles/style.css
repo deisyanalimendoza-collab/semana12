@@ -1,0 +1,196 @@
+/* --- VARIABLES GLOBALES --- */
+:root {
+    --bg-dark: #0a0a0a;         /* Negro profundo industrial */
+    --accent-orange: #ff9f1c;   /* Naranja vibrante */
+    --amber-glow: #ffbf00;      /* Ámbar de advertencia */
+    --text-white: #f8f9fa;
+    --card-bg: rgba(255, 159, 28, 0.05); 
+    --border-industrial: rgba(255, 191, 0, 0.3);
+}
+
+/* --- BASE --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas', 'Segoe UI', monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER Y MENÚ --- */
+.header-nombre { 
+    padding: 30px 0 10px 0; 
+    text-align: center; 
+}
+
+.header-nombre h1 { 
+    font-size: 2.2rem; 
+    margin: 0; 
+    letter-spacing: 3px; 
+    color: var(--amber-glow); 
+}
+
+.linea-separadora { 
+    width: 80%; 
+    border: 0; 
+    border-top: 2px solid var(--accent-orange); 
+    margin: 10px auto; 
+}
+
+/* Contenedor del menú */
+.nav-container {
+    margin: 15px auto 25px auto;
+    width: 95%;
+    max-width: 900px;
+}
+
+/* Lista de ejercicios en horizontal */
+.nav-ejercicios {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Se adapta si la pantalla es pequeña */
+}
+
+/* Botones del menú */
+.nav-ejercicios li a {
+    text-decoration: none;
+    color: var(--accent-orange);
+    background: rgba(255, 159, 28, 0.03);
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 159, 28, 0.2);
+    border-radius: 4px;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Efecto Iluminado al pasar el mouse */
+.nav-ejercicios li a:hover {
+    color: var(--bg-dark);
+    background: var(--accent-orange);
+    border-color: var(--amber-glow);
+    box-shadow: 0 0 12px var(--accent-orange);
+    transform: translateY(-2px);
+}
+
+/* --- CONTENEDOR Y CARDS --- */
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-problema, .card-bienvenida {
+    background: var(--card-bg);
+    border: 1px solid var(--border-industrial);
+    border-radius: 4px;
+    padding: 40px;
+    width: 95%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 159, 28, 0.1);
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Decoración de esquina industrial */
+.card-problema::before, .card-bienvenida::before {
+    content: ""; 
+    position: absolute; 
+    top: -2px; 
+    left: -2px; 
+    width: 20px; 
+    height: 20px;
+    border-top: 2px solid var(--accent-orange); 
+    border-left: 2px solid var(--accent-orange);
+}
+
+/* --- IMÁGENES --- */
+.imagen-proyecto {
+    width: 100%;            /* Se ajusta al ancho de la card automáticamente */
+    max-width: 400px;       /* Evita que se haga gigante */
+    height: auto;           /* Mantiene las proporciones correctas sin deformar */
+    border-radius: 6px;     /* Bordes suavemente redondeados */
+    margin: 20px 0;         /* Separa la imagen del texto de arriba y del botón de abajo */
+    border: 1px solid rgba(255, 191, 0, 0.2); /* Borde sutil a la imagen */
+    object-fit: cover;
+}
+
+/* --- FORMULARIOS E INPUTS --- */
+input, select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid var(--border-industrial);
+    background: rgba(0,0,0,0.5);
+    color: var(--accent-orange);
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Consolas', monospace;
+}
+
+/* --- BOTONES --- */
+.btn-accion, .btn-principal {
+    background: var(--accent-orange);
+    border: none;
+    color: var(--bg-dark);
+    padding: 15px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-accion:hover, .btn-principal:hover { 
+    background: var(--amber-glow); 
+    transform: translateY(-2px); 
+}
+
+.btn-franja {
+    display: block;
+    width: 320px;
+    margin: 20px auto 40px auto;
+    border: 2px solid var(--accent-orange);
+    color: var(--accent-orange);
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-franja:hover { 
+    background: var(--accent-orange); 
+    color: var(--bg-dark); 
+}
+
+/* --- RESULTADOS Y FOOTER --- */
+#resul { 
+    margin-top: 25px; 
+    font-size: 1.2rem; 
+    color: var(--amber-glow); 
+    min-height: 1.5em; 
+    font-weight: bold;
+}
+
+.footer-industrial {
+    text-align: center;
+    padding: 25px;
+    color: #444;
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+}

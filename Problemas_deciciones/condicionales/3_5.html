@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 3.5 - Deisy Mendoza</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <div class="header-nombre">
+        <h1>DEISY ANALÍ MENDOZA GUTIÉRREZ</h1>
+        <hr class="linea-separadora">
+    </div>
+
+    <div class="contenedor-principal">
+        <div class="card-problema" style="max-width: 600px;"> <h2 style="color: var(--accent-orange);">👥 Persona de Menor Edad</h2>
+            <p>Ingrese los datos de tres personas para determinar quién es el menor.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <input type="text" id="nom1" placeholder="Nombre 1">
+                <input type="number" id="ed1" placeholder="Edad 1">
+                
+                <input type="text" id="nom2" placeholder="Nombre 2">
+                <input type="number" id="ed2" placeholder="Edad 2">
+                
+                <input type="text" id="nom3" placeholder="Nombre 3">
+                <input type="number" id="ed3" placeholder="Edad 3">
+            </div>
+
+            <button class="btn-accion" onclick="hallarMenor()">IDENTIFICAR MENOR</button>
+            
+            <div id="resul"></div>
+        </div>
+    </div>
+
+    <a href="3_6.html" class="btn-franja">SIGUIENTE ALGORITMO ➔</a>
+
+    <script src="../scripts/problemas.js"></script>
+</body>
+</html>
